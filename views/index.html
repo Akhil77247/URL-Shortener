@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="min-h-screen w-full max-w-svw flex items-center justify-center">
+        <div class="w-full max-w-sm rounded-2xl shadow-xl shadow-gray-600 flex flex-col items-center py-4">
+            <h1 class="text-4xl font-semibold">Url Shortner</h1>
+            <form action="/" method="post"  id="myForm" class="w-full flex flex-col items-center ">
+                <div class="w-full max-w-5/6 my-2 flex flex-col gap-1">
+                    <label htmlFor="url" class="text-lg font-medium">Enter URL:</label>
+                    <input type="text" name="url" class="border-2 border-gray-300 px-3 py-2 rounded-md" />
+                </div>
+                <div class="w-full max-w-5/6 my-2 flex flex-col">
+                    <label htmlFor="shortCode" class="text-lg font-medium">Custom Short URL(optional):</label>
+                    <input type="text" name="shortCode" class="border-2 border-gray-300 px-3 py-2 rounded-md " />
+                </div>
+
+                <button class="my-3 bg-cyan-500 px-3 py-2 border-none rounded-xl text-lg font-medium text-white"
+                    type="submit">Shorten</button>
+            </form>
+
+            <p class="text-xl font-semibold">Shortened Url</p>
+
+            <!-- <div class="w-full max-w-5/6 my-2 border px-3 flex-1 py-2 rounded-md border-gray-300"></div> -->
+            <ul class="w-full max-w-5/6 text-center flex flex-col items-center justify-center" id="myUrls">
+                {{Shortened-urls}}
+            </ul> 
+
+        </div>
+    </div>
+</body>
+
+</html>
